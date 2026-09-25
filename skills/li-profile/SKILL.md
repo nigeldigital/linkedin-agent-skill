@@ -14,6 +14,22 @@ A profile is not a resume. A resume answers "what have you done". A profile
 answers "should I message this person", and it answers it in about four
 seconds, from the headline and the first two lines of the about.
 
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
+Before writing anything, read `linkedin/voice.md` so the output is in the user's voice and respects Off limits.
+
 ## Input
 
 Ask the user to paste: headline, about section, current role and the last two
@@ -23,7 +39,7 @@ LinkedIn on their behalf.
 
 ## Score it
 
-Read `rubric.json` in this folder. Twelve items, 100 points, each with what
+Read `rubric.json` from this skill's base directory. Twelve items, 100 points, each with what
 full marks looks like. Score every item, show the table, and give the total.
 Be honest - most profiles land in the 30s and 40s on the first pass, and a
 generous score is useless.
