@@ -12,6 +12,22 @@ description: >-
 One good long asset contains four to six posts. Most people extract one and
 throw the rest away.
 
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
+Before writing anything, read `linkedin/voice.md` so the output is in the user's voice and respects Off limits.
+
 ## Input
 
 A transcript, an article, a newsletter, a script, a call summary. If the user
@@ -43,7 +59,7 @@ Each extract becomes one post, and each post has to stand completely on its
 own - the reader has not seen the video and never will. Never write "as I
 mentioned in my latest video". The post is the thing.
 
-Assign a hook formula from `li-post/hooks.json` to each, and vary them: five
+Assign a hook formula from the `li-post` skill's `hooks.json` (in the sibling `li-post` folder next to this skill's base directory) to each, and vary them: five
 posts from one source with the same hook shape reads as a content mill.
 
 Order them across the week so the strongest claim goes first, the story goes
