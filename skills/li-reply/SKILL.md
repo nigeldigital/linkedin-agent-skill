@@ -15,6 +15,22 @@ reply is a second engagement event on the post, and the first hour of replies
 does most of the work. But the value is not equal across comments, so this
 skill sorts before it writes.
 
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
+Before writing anything, read `linkedin/voice.md` so the output is in the user's voice and respects Off limits.
+
 ## Input
 
 The user pastes the comments, ideally with names and roles. Screenshots are
