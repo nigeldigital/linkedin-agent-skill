@@ -14,14 +14,29 @@ description: >-
 Turns one raw idea into a LinkedIn post that sounds like the person who
 posted it.
 
+
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
 ## Before you write
 
-1. Read `~/.claude/linkedin/voice.md` if it exists. That file is the user's
+1. Read the Project doc `linkedin/voice.md` if it exists. That file is the user's
    voice profile: how they talk, what they never say, who they are talking to.
    If it does not exist, ask for **three of their own past posts**, infer the
    voice from those, and write the file. Do not skip this and do not invent a
    voice. A post in the wrong voice is worse than no post.
-2. Read `hooks.json` in this folder. All 21 formulas, with templates, filled
+2. Read `hooks.json` from this skill's base directory. All 21 formulas, with templates, filled
    examples, what each is for, and how each one usually gets ruined.
 3. If the idea is thin - "post about AI" - do not pad it. Ask one batched
    question: what happened, to whom, and what did it cost or return. A post
@@ -71,7 +86,7 @@ Reply "yes" to log it, or tell me what to change.
 ```
 
 **5. Never publish.** This skill produces text. The user posts it. On "yes",
-append the post to `~/.claude/linkedin/log.md` with the date, the hook used
+append the post to the Project doc `linkedin/log.md` with the date, the hook used
 and the first line, so `/li-audit` has a history to work from later.
 
 ## Rules that make the difference
