@@ -49,6 +49,14 @@ Then spend ten minutes on `templates/voice.md`. Copy it to
 into Claude and say "write my voice.md from these". Every skill reads that
 file. Skip it and everything comes out sounding like everyone else.
 
+## Cowork adaptation (this fork)
+
+This fork is adapted for Claude Cowork, where the home folder does not persist
+between sessions. The voice profile, weekly plan and post log live as docs in the
+attached claude.ai Project (`linkedin/voice.md`, `linkedin/plan.md`,
+`linkedin/log.md`). Scripts and data files are found through each skill's base
+directory. Every skill checks the Off limits section of `voice.md`.
+
 ## The eleven
 
 | command | what it does |
