@@ -11,7 +11,7 @@ description: >-
 
 # li-human
 
-Two tools live in this folder and they both actually run. Use them. Do not
+Two tools live in this skill's base directory (shown as "Base directory for this skill" when it loads) and they both actually run. Call them by full path, e.g. `python3 <base>/humanize.py`, and write drafts to a scratch file first. Use them. Do not
 eyeball this.
 
 ```bash
