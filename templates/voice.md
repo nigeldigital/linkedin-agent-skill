@@ -1,6 +1,6 @@
 # voice.md
 
-Copy this to `~/.claude/linkedin/voice.md` and fill it in. Every skill in the
+In Cowork, save this as the Project doc `linkedin/voice.md` (outside Cowork: `~/.claude/linkedin/voice.md`) and fill it in. Every skill in the
 pack reads it. Ten minutes here is the difference between drafts you post and
 drafts you rewrite.
 
@@ -41,6 +41,12 @@ where the good posts come from.
 - **Topics I do not post about:**
 - **Clients or numbers I cannot name publicly:**
 - **Claims I am not allowed to make:** (regulated industry, employer policy, NDA)
+- **Employer guardrails (example defaults for a senior exec at a public company - edit to fit):**
+  - No unreleased financials, KPIs, headcount, or internal metrics
+  - No vendor names, contract terms, or sourcing decisions unless already public
+  - No roadmap, launch timing, or unannounced initiatives
+  - No personal job-search or career-move signals
+  - Flag anything about the employer, its partners or competitors for a comms/legal check before posting
 
 ## Proof I can use
 
