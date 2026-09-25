@@ -14,6 +14,21 @@ badly. A comment on a post with 400 reactions gets seen by more people than
 most of your own posts. A generic one gets seen by nobody and costs you
 credibility with the author.
 
+
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
 ## Input
 
 The user pastes the post text (and the author's name and role if they have
@@ -81,7 +96,7 @@ part people reply to.
 If the user wants an engagement round, ask for the 5-10 posts as pasted text
 in one message, return one comment each in a single block, and keep a running
 note of who they have already commented on this week in
-`~/.claude/linkedin/log.md`. Commenting on the same three people every day is
+the Project doc `linkedin/log.md`. Commenting on the same three people every day is
 visible and it looks like what it is.
 
 ## Never
