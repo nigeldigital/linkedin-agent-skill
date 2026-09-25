@@ -13,6 +13,21 @@ The only honest source of what works for an account is that account. Every
 rule in every LinkedIn guide, including the ones in this pack, is a prior. The
 user's own last 30 posts are the evidence.
 
+
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
 ## Input
 
 Ask for whichever the user has:
@@ -22,7 +37,7 @@ Ask for whichever the user has:
 - Or just the posts and their reaction counts, which is enough for a first
   pass.
 
-Also read `~/.claude/linkedin/log.md` if it exists, since it records which
+Also read the Project doc `linkedin/log.md` if it exists, since it records which
 hook formula each post used.
 
 ## What to actually measure
@@ -46,7 +61,7 @@ impressions and 40 comments beat the one with 12,000 impressions and 6.
 With the top 5 and bottom 5 side by side, look for what actually separates
 them, and be willing to conclude something the user will not like:
 
-- Hook formula. Which numbers from `hooks.json` are in the top 5?
+- Hook formula. Which numbers from the `li-post` skill's `hooks.json` (in the sibling `li-post` folder next to this skill's base directory) are in the top 5?
 - Format. Text, document, image, video.
 - Length.
 - Theme.
