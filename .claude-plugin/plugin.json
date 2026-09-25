@@ -1,13 +1,20 @@
 {
   "name": "linkedin-agent",
-  "description": "Eleven Claude skills that run a LinkedIn account: posts off 21 hook formulas, comments, replies, profile score, weekly plan, DMs, inbox triage, carousels, repurposing, audits, and a humanizer that strips the AI fingerprint and scores the draft before it goes out.",
-  "version": "1.0.0",
+  "description": "Eleven LinkedIn skills adapted for Claude Cowork: voice, plan and post log are stored in the attached claude.ai Project. Posts, comments, replies, profile score, weekly plan, DMs, inbox triage, carousels, repurposing, audits, and a humanizer.",
+  "version": "1.1.0",
   "author": {
-    "name": "Jake Schincariol",
+    "name": "Jake Schincariol (original); Cowork adaptation for Nigel Storey",
     "url": "https://opusjake.ai"
   },
   "homepage": "https://opusjake.ai/r/linkedin-agent",
-  "repository": "https://github.com/Jakeschincariol/linkedin-agent-skill",
+  "repository": "https://github.com/nigeldigital/linkedin-agent-skill",
   "license": "MIT",
-  "keywords": ["linkedin", "content", "writing", "humanizer", "social", "marketing"]
+  "keywords": [
+    "linkedin",
+    "content",
+    "writing",
+    "humanizer",
+    "social",
+    "marketing"
+  ]
 }
