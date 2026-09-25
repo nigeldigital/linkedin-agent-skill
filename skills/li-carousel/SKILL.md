@@ -13,6 +13,22 @@ Document posts are the highest-dwell format on LinkedIn, because a swipe is
 counted and a scroll is not. The format rewards one idea broken into steps.
 It punishes a text post cut into pieces.
 
+## Where the user's files live (Cowork)
+
+The voice profile, weekly plan and post log are stored as docs in the claude.ai
+Project attached to this session, so they persist between sessions:
+`linkedin/voice.md`, `linkedin/plan.md`, `linkedin/log.md`.
+
+- Read them with the Projects tool (`project_read`, or `project_search`).
+- Write with `project_write` to the same path. It replaces the whole doc, so to
+  add to `log.md` read it first, append the new entry, and write the full text
+  back.
+- If no Project is attached, use `~/.claude/linkedin/<file>` instead.
+- `voice.md` has an **Off limits** section. Check every draft against it before
+  showing it, and flag anything that touches it instead of writing around it.
+
+Before writing anything, read `linkedin/voice.md` so the output is in the user's voice and respects Off limits.
+
 ## When to use it instead of a text post
 
 Use a carousel when the idea has **sequence** - steps, a countdown, a
